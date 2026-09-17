@@ -1,0 +1,185 @@
+:root {
+  --ground: #13151A;
+  --surface: #1C1F26;
+  --surface-high: #343841;
+  --accent: #4AF2C8;
+  --gold: #D2A460;
+  --muted: #9CA3AF;
+  --up: #4AF2C8;
+  --down: #FF6B6B;
+  --flat: #9CA3AF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--ground);
+  color: #E7E9EE;
+  min-height: 100vh;
+}
+
+.topbar {
+  padding: 24px 20px 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+.asOf {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-high);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.ownTotal {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+
+.ownTotal .bigNumber {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ownTotal .bigLabel {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.ownTotal .deltas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.deltaChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.deltaChip .arrow { font-size: 13px; }
+.deltaChip.up { color: var(--up); }
+.deltaChip.down { color: var(--down); }
+.deltaChip.flat { color: var(--flat); }
+.deltaChip .caption { color: var(--muted); font-size: 12px; }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0 14px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  background: var(--surface);
+  border: 1px solid var(--surface-high);
+  color: #E7E9EE;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: var(--accent);
+  color: var(--ground);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.platformHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.platformHead h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.platformHead .rankLine {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+table.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table.leaderboard th, table.leaderboard td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--surface-high);
+}
+
+table.leaderboard th {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+table.leaderboard td.num, table.leaderboard th.num { text-align: right; }
+
+tr.own td {
+  background: rgba(74, 242, 200, 0.08);
+  font-weight: 600;
+}
+
+tr.own td:first-child {
+  border-left: 3px solid var(--accent);
+}
+
+tr.notOk td { color: var(--muted); }
+
+.precisionTilde { color: var(--muted); }
+
+.footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer code {
+  color: var(--gold);
+}
+
+.error {
+  color: var(--down);
+  padding: 20px;
+}
