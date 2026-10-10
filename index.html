@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DEFCON Social Tracker</title>
+<link rel="stylesheet" href="style.css?v=542677e" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>DEFCON Social Tracker</h1>
+    <p id="asOf" class="asOf">Loading…</p>
+  </header>
+
+  <main id="app">
+    <section id="ownTotal" class="card ownTotal"></section>
+
+    <section id="platformSummary" class="platformSummary"></section>
+
+    <nav id="tabs" class="tabs"></nav>
+
+    <section id="platformDetail"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Reads <code>data/report.json</code> straight from this repo. Rebuilt after every scrape.</p>
+  </footer>
+
+  <script src="growth.js?v=542677e"></script>
+  <script src="app.js?v=542677e"></script>
+</body>
+</html>
